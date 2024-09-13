@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Редактирование</title>
+</head>
+<body>
+<form th:method="patch" th:action="@{/users/{id}(id=${user.getId()})}" th:object="${user}">
+    <label for="name">Имя</label>
+    <input type="text" th:field="*{name}" id="name" placeholder="Введите имя">
+    <label for="surname">Фамилия</label>
+    <input type="text" th:field="*{surname}" id="surname" placeholder="Введите фамилию">
+    <input type="submit" value="Принять изменения">
+</form>
+</body>
+</html>

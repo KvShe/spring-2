@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Список пользователей</title>
+</head>
+<body>
+<h2 style="text-align: center;">List Users</h2>
+
+<div th:each="user : ${users}">
+    <a th:href="@{/users/{id}(id=${user.getId()})}" th:text="${user}"/>
+</div>
+
+<!--🗘❌-->
+
+<a href="http://localhost:8080">⬅</a>
+</body>
+</html>
